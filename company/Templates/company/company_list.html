@@ -30,21 +30,21 @@
                 {% for company in company_list %}
                 <tr>
                     {% comment %} <th scope="row">{{forloop.counter}}</th> {% endcomment %}
-                    <td class="ml-5"><a href="{% url 'company:company_detail' company.id %}">{{company.title}}</a></td>
+                    <td class="ml-5"><a href="{% url 'companys:company_detail' company.id %}">{{company.title}}</a></td>
                     <td class="text-center">{{company.cname}}</td>
                     <td class="text-center">{{company.ownername}}</td>
                     <td class="text-center">{{company.address | floatformat:2}}</td>
                     <td class="text-center">{{company.contact}}</td>
                     <td class="text-center">{{company.industry_type}}</td>
-                    <td><a href="{% url 'company:company_update' company.id %} ">Update</a></td>
-                    <td><a href="{% url 'company:company_delete' company.id %}">Delete</a></td>
+                    <td><a href="{% url 'companys:company_update' company.id %} ">Update</a></td>
+                    <td><a href="{% url 'companys:company_delete' company.id %}">Delete</a></td>
                 </tr>
             {% endfor %}
         
             </tbody>
         </table>    
         <div class="d-flex justify-content-center">
-            <a href="{% url 'company:company_create' %}" class="d-block btn btn-primary btn-lg my-5">Add New</a>
+            <a href="{% url 'companys:company_create' %}" class="d-block btn btn-primary btn-lg my-5">Add New</a>
         </div>
     </div>
         
