@@ -34,7 +34,7 @@
                     <td class="text-center">{{company.cname}}</td>
                     <td class="text-center">{{company.ownername}}</td>
                     <td class="text-center">{{company.address | floatformat:2}}</td>
-                    <td class="text-center">{{company.contact}}</td>
+                    <td class="text-center">{{company.contact }}</td>
                     <td class="text-center">{{company.industry_type}}</td>
                     <td><a href="{% url 'company:company_update' company.id %} ">Update</a></td>
                     <td><a href="{% url 'company:company_delete' company.id %}">Delete</a></td>
