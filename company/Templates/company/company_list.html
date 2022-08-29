@@ -30,12 +30,12 @@
                 {% for company in company_list %}
                 <tr>
                     {% comment %} <th scope="row">{{forloop.counter}}</th> {% endcomment %}
-                    <td class="ml-5"><a href="{% url 'companys:company_detail' company.id %}">{{company.title}}</a></td>
-                    <td class="text-center">{{company.cname}}</td>
-                    <td class="text-center">{{company.ownername}}</td>
-                    <td class="text-center">{{company.address | floatformat:2}}</td>
-                    <td class="text-center">{{company.contact}}</td>
-                    <td class="text-center">{{company.industry_type}}</td>
+                    <td class="ml-5"><a href="{% url 'companys:company_detail' company.id %}"></a>{{company.cname}}</td>
+                     <td class="text-center">{{company.ownername}}</td>
+                    <td class="text-center">{{company.address}}</td>
+                    <td class="text-center">{{company.email}}</td>
+                    <td class="text-center">{{company.contact }}</td>
+                    <td class="text-center">{{company.Industry_type}}</td>
                     <td><a href="{% url 'companys:company_update' company.id %} ">Update</a></td>
                     <td><a href="{% url 'companys:company_delete' company.id %}">Delete</a></td>
                 </tr>

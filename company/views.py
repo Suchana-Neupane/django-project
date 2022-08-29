@@ -12,7 +12,7 @@ class CompanyBaseView(View):
     success_url = reverse_lazy('companys:all')
 
 class CompanyListView(CompanyBaseView, ListView):
-    """View to list all companys.
+    """View to list all company.
     Use the 'company_list' variable in the template
     to access all Company objects"""
 
